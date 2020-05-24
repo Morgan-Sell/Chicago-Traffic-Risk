@@ -1,6 +1,6 @@
 # Improving Chicago's Streets
 
-![VisionZero]
+![VisionZero](https://github.com/Morgan-Sell/Chicago-Traffic-Risk/blob/master/images/VisionZero_Horizontal_.png)
 
 ## Table of Contents
 
