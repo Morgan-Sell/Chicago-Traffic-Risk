@@ -6,7 +6,7 @@
 
 1) Executive Summary
 2) VisionZero
-3) Data
+3) Data Processing and Feature Engineering
 4) Exploratory Data Analysis
 5) Model Evaluation and Selection
 6) Further Investigation
@@ -30,11 +30,15 @@ The basic logic of Vision Zero is that any traffic collision that results in dea
 Many major U.S. metropolitan areas - e.g. New York, Los Angeles, and Austin - have adopted the program.
 
 ## Data Processing and Feature Engineering
-The data source is the Chicago Police Department's (CPD) electronic crash reporting system (E-Crash) at CPD; it excludes any personally identifiable information, e.g. vehicle make and model. The accidents occurred from September 1, 2017 to February 29, 2020. The dataset is comprised of more than 290,000 crashes. 
+The data source is the Chicago Police Department's (CPD) electronic crash reporting system (E-Crash) at CPD; it excludes any personally identifiable information, e.g. vehicle make and model. The accidents occurred from September 1, 2017 to February 29, 2020. The dataset is comprised of more than 290,000 crashes.
+
 Most of the crash parameters - including street condition data, primary cause, and weather condition - are recorded by the reporting officer based on the best available information at the time of the incident.
 The dataset is imbalanced, less than 2.0% of the accidents resulted in a fatality or severe injury. (Hopefully, the datasets imbalance increases overtime.) I applied under sampling to resolve it because the computation costs to evaluate/train various models and different sets of features was high.
+
 I recognize that one of undersampling’s setback is information loss. To understand the magnitude of the risk, early on, I executed a couple variations of Logistic Regression and XGBoost applying over- and under-sampling. The different in results were negligible.
+
 As mentioned, the bulk of the features are categorical. Also, many of the features had more than 20 possible values. By applying one-hot encoding, exploring the data, and reviewing the results of many variation of each model, I narrowed in on the most informative feature.
+
 Being mindful of ensemble method’s feature importance limitations, I obtain significant use from it as an exploratory approach in identifying which independent variables provided the greatest information gain in compared to other in their “model cohort”. Combining this process and exploratory data analysis is what the led to the significant increase in recall.
 
 ## Exploratory Data AnalysisI
