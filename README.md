@@ -1,4 +1,4 @@
-# Improving Chicago's Streets
+# Protecting Chicago's Streets
 
 ![VisionZero](https://github.com/Morgan-Sell/Chicago-Traffic-Risk/blob/master/images/VisionZero_Horizontal_.png)
 
@@ -41,7 +41,7 @@ As mentioned, the bulk of the features are categorical. Also, many of the featur
 
 Being mindful of ensemble method’s feature importance limitations, I obtain significant use from it as an exploratory approach in identifying which independent variables provided the greatest information gain in compared to other in their “model cohort”. Combining this process and exploratory data analysis is what the led to the significant increase in recall.
 
-## Exploratory Data AnalysisI
+## Exploratory Data Analysis
 
 I analyzed if a car’s speed, which in this dataset is assumed as the posted speed limit, examining the bar chart below, we see an increasing trend in the percentage of total accidents that resulted in a fatality/severe injury as the posted speed limit increases.
 
